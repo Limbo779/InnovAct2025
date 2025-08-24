@@ -3,10 +3,12 @@ send a half signed msg to other party and wait for full sign
 after the full sign the script will write it into my msg file and candidate block , after this it will start forwarding
 msg sending will be made through sending.py
 
-2.) receiving.py
+2.) receiving.py forwarder.py
 always will be running . once it got half signed msg , it will put sign and send back to the send sender
 when this file recieve a block or full signed msg it will use sending.py to forward to all the friends
 when it get full signed msg it will put into candidate block
+
+forwarder
 
 3.) cli.py
 this is the front end of the app.
