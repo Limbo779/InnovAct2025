@@ -1,0 +1,27 @@
+1.) sending.py 
+send a half signed msg to other party and wait for full sign
+after the full sign the script will write it into my msg file and candidate block , after this it will start forwarding
+
+2.) receiving.py
+always will be running . once it got half signed msg , it will put sign and send back to the send sender
+when this file recieve a block or full signed msg it will use sending.py to forward to all the friends
+when it get full signed msg it will put into candidate block
+
+3.) cli.py
+this is the front end of the app.
+this will first ask the user whom to send the msg
+it will run sending.py if user wanna send msg .
+this will look into candidate block and my msg file to put the msg history
+
+3.1) cli.py will decrypt the msg that was send to user and will ignore all the msg sent by user instead it will use my msg file for user sended msg
+3.2)when user wanna send the msg it will run the sending.py and send the msg , it will look for new msg to user from candidate block
+3.3)user can quit the program by /quit
+
+4.) mine.py
+this will check for user count in the unfinished block by checking unique public keys
+then it will change the target accrodingly and start mining for the nonce 
+this will stop mining when a other user's block is verified by verify.py it will stop mining and attach the block into the blockchain
+if successfully mined it will broadcast the block using sending.py
+
+5.) verify.py
+this will verify the upcoming block whether it is correctly mined and has other criteria 
