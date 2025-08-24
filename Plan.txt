@@ -1,4 +1,4 @@
-1.) sending.py 
+1.) sending.py and msg_maker.py
 send a half signed msg to other party and wait for full sign
 after the full sign the script will write it into my msg file and candidate block , after this it will start forwarding
 
