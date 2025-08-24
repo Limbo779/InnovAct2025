@@ -76,13 +76,13 @@ sending_byte={
     time:l
 }
 
-with open('send_file.dat','wb') as file:
+with open('half_signed_msg.dat','wb') as file:
     pickle.dump(sending_byte,file)
 
 with open('User_ip.json','r') as file:
     ip_log=json.load(file)
 
-inputs = [ip_log[user_choice], 'send_file.dat']  
+inputs = [ip_log[user_choice], 'half_signed_msg.dat']  
 inputs_joined = '\n'.join(inputs) + '\n'
 
 # Run the script with provided inputs
