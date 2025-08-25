@@ -34,5 +34,6 @@ Due to the complexity involved, the full implementation is incomplete. However, 
 3. Currently, no full runnable prototype is available; please refer to our PPT for detailed walkthroughs.
 
 ## Team
-- Your Name
-- Your Teammates
+- Sarvesh VR - 25BCE0980
+- Sreya - 25BEC0062
+- Keerthi Shree - 25BEC0064
